@@ -1,0 +1,18 @@
+[package]
+name = "binfetch-wasm"
+version = "1.0.0"
+authors = ["Amy Parker <amy@amyip.net>"]
+description = "Fetch binary data over HTTP inside WASM"
+license = "GPL-2.0-or-later"
+homepage = "https://github.com/amyipdev/binfetch-wasm"
+documentation = "https://docs.rs/binfetch-wasm"
+repository = "https://github.com/amyipdev/binfetch-wasm"
+edition = "2021"
+# TODO: MSRV
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+js-sys = "0.3.67"
+wasm-bindgen = "0.2.90"
+web-sys = { version = "0.3.67", features = ["XmlHttpRequest"] }
