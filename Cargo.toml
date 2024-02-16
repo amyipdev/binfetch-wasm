@@ -1,6 +1,6 @@
 [package]
 name = "binfetch-wasm"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["Amy Parker <amy@amyip.net>"]
 description = "Fetch binary data over HTTP inside WASM"
 license = "GPL-2.0-or-later"

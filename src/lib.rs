@@ -5,6 +5,9 @@ pub fn basic_fetch(uri: &str) -> Result<Vec<u8>, wasm_bindgen::JsValue> {
     r.open_with_async("GET", uri, false)?;
     r.override_mime_type("text/plain; charset=x-user-defined")?;
     r.send()?;
+    if r.status().unwrap() != 200 {
+        return Err(wasm_bindgen::JsValue::null());
+    }
     let rs = r.response()?.dyn_into::<js_sys::JsString>()?;
     let mut v: Vec<u8> = vec![];
     for n in rs.iter() {
